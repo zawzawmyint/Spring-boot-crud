@@ -7,20 +7,20 @@ import javax.persistence.Id;
 
 @Entity
 public class Employee {
-
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private String ename;
-	private int mobile;
-	private int salary;
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Long id;
+    private String ename;
+    private int mobile;
+    private int salary;
 
-	public Employee() {
-
+    public Employee() {
+		
 	}
 
 	public Employee(Long id, String ename, int mobile, int salary) {
-
+		
 		this.id = id;
 		this.ename = ename;
 		this.mobile = mobile;
@@ -59,4 +59,8 @@ public class Employee {
 		this.salary = salary;
 	}
 
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", ename=" + ename + ", mobile=" + mobile + ", salary=" + salary + "]";
+	}
 }
